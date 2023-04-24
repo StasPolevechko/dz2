@@ -6,3 +6,15 @@
 
 32679 -> 6
 */
+Console.Write("введи число: ");
+int number = int.Parse(Console.ReadLine() ?? "");
+int thirdNumber(int number)
+{
+    while (number > 999)
+    {
+        number /= 10;
+    }
+    return number % 10;
+}
+
+Console.WriteLine($" {number} -> {thirdNumber(number)} ");
