@@ -4,3 +4,19 @@
 782 -> 8
 918 -> 1
 */
+int Prompt(string message)
+{
+    System.Console.Write(message);
+    string value = Console.ReadLine() ??"";
+    int result = Convert.ToInt32(value);
+    return result;
+}
+int number = Prompt("Введите трехзначное число > ");
+if (number < 100 || number >= 1000)
+{
+    Console.WriteLine("вы ввели не трехзначное число, пожалуйста повторите ввод");
+    return;
+}
+Console.WriteLine($"введенное число {number}");
+int secondRank = number / 10 % 10;
+Console.WriteLine($"вторая цифра {secondRank}");
